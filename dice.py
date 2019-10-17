@@ -4,6 +4,7 @@
 import random 
 random.randint(1, 6)
 
+Number = 0
 numOne = 0
 numTwo = 0
 numThree = 0
@@ -12,6 +13,7 @@ numFive = 0
 numSix = 0
 
 def printNum(): #displays number of specific number
+	print("Total Rolls " + str(Number))
 	print("1s: " + str(numOne))
 	print("2s: " + str(numTwo))
 	print("3s: " + str(numThree))
@@ -33,6 +35,8 @@ while x <= rolls:
 	x += 1
 	RandNum = random.randint(1,6)
 	print(RandNum) #counts number
+	if RandNum <= 6:
+		Number += 1
 	if RandNum == 1:
 		numOne += 1
 	if RandNum == 2:
