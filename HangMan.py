@@ -1,4 +1,4 @@
-myWord = "Panda"
+myWord = "panda"
 
 while True:
 	choice = input("Type a word: ")
@@ -20,3 +20,5 @@ while True:
 		if s == letter:
 			print(count)
 		count += 1
+
+	if choice == ""
