@@ -1,16 +1,6 @@
-myWord = "panda"
-myList = list(myWord)
-secret = []
-
-for p in myList:
-	secret.append("_")
-
-secret[0] = "p"
-secret[1] = "a"
-secret[4] = "a"
-secret[2] = "n"
-secret[3] = "d"
-print(secret)
+myWord = list("panda")
+myList = list("_____")
+index = 0
 
 
 
@@ -25,10 +15,11 @@ while True:
 
 
 	letter = input("Type a Letter: ")
-	if letter in my:
+	if letter == myWord:
+		myList[index] = guess
 		print("That is a Letter")
-	else:
-		print("Not a Letter in the Word")
+	index += 1	
+	print(myList)
 
 	count = 1
 	for s in myWord:
