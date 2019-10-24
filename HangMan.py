@@ -1,4 +1,19 @@
 myWord = "panda"
+myList = list(myWord)
+secret = []
+
+for p in myList:
+	secret.append("_")
+
+secret[0] = "p"
+secret[1] = "a"
+secret[4] = "a"
+secret[2] = "n"
+secret[3] = "d"
+print(secret)
+
+
+
 
 while True:
 	choice = input("Type a word: ")
@@ -10,7 +25,7 @@ while True:
 
 
 	letter = input("Type a Letter: ")
-	if letter in myWord:
+	if letter in my:
 		print("That is a Letter")
 	else:
 		print("Not a Letter in the Word")
@@ -21,4 +36,5 @@ while True:
 			print(count)
 		count += 1
 
-	if choice == ""
+	if choice == "end":
+		break
