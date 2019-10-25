@@ -1,8 +1,5 @@
 myWord = list("panda")
 myList = list("_____")
-index = 0
-
-
 
 
 while True:
@@ -13,12 +10,15 @@ while True:
 	else:
 		print("that is not the Word")
 
-
-	letter = input("Type a Letter: ")
-	if letter == myWord:
-		myList[index] = guess
-		print("That is a Letter")
-	index += 1	
+	index = 0
+	guess = input("Type a Letter: ")
+	for letter in myWord:
+		if letter == guess:
+			myList[index] = guess
+			print("That is a Letter")
+		index += 1	
+	else:
+		print("That isn't a Letter")
 	print(myList)
 
 	count = 1
