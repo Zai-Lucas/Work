@@ -1,4 +1,4 @@
-myWord = list("panda")
+myWord = "panda"
 myList = list("_____")
 
 
@@ -7,6 +7,8 @@ while True:
 
 	if choice == myWord:
 		print("That is the correct Word")
+		print("Congrats, You Win!")
+		break
 	else:
 		print("that is not the Word")
 
@@ -21,9 +23,12 @@ while True:
 		print("That isn't a Letter")
 	print(myList)
 
+	if letter == myWord:
+		print(Correct)
+
 	count = 1
-	for s in myWord:
-		if s == letter:
+	for p in myWord:
+		if p == letter:
 			print(count)
 		count += 1
 
