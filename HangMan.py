@@ -1,6 +1,7 @@
 myWord = "panda"
 myList = list("_____")
-
+Miss = ("b""c""e""f""g""h""i""j""k""l""m""n""o""q""r""s""t""u""v""w""x""y""z")
+MissList = list("-----------------------")
 
 while True:
 	choice = input("Type a word: ")
@@ -18,10 +19,16 @@ while True:
 		if letter == guess:
 			myList[index] = guess
 			print("That is a Letter")
+		index += 1
+	for letter in Miss:
+		if letter == guess:
+			MissList[index] = guess
+			print("That isn't a Letter")
 		index += 1	
-	else:
-		print("That isn't a Letter")
+	print(MissList)
 	print(myList)
+
+	
 
 	if letter == myWord:
 		print(Correct)
