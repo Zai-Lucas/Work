@@ -1,6 +1,9 @@
-count = 0
-while count < 100:
+count = 1
+while count <= 100:
+	print(count, end="")
+	if count % 3 == 0:
+		print("-fizz", end="")
+	if count % 5 == 0:
+		print("-buzz", end="")
 	count += 1
-	if count == 3:
-		print(str(count) + "fizz")
-	print(count)
+	print("")
