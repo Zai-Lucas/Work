@@ -8,36 +8,33 @@ dime = 0
 nickel = 0
 penny = 0
 
-price float(input("What is the price?: $"))
-given float(input("Waht is the given money?: $"))
 
-halfDollar += dollar * 2
-quarter += halfDollar * 2
-dime += quarter * 2.5
-nickel += dime * 2
-penny += nickel * 5
+price = float(input("What is the price?: $"))
+given = float(input("Waht is the given money?: $"))
+change = given - price
+penny = change * 100
 
-while penny >= 0:
 
-	nickel = int(penny / 100)
-	penny = penny % 100
+dollar = int(penny / 100)
+penny = penny % 100
 
-	dime = int(nickel / 100)
-	nickel = nickel % 100
+halfDollar = int(penny / 50)
+penny = penny % 50
 
-	quarter = int(dime / 100)
-	dime = dime % 100
+quarter = int(penny / 25)
+penny = penny % 25
 
-	halfDollar = int(quarter / 100)
-	quarter = quarter % 100
+dime = int(penny / 10)
+penny = penny % 10
 
-	dollar = int(halfDollar / 100)
-	halfDollar = halfDollar % 100
+nickel = int(penny / 5)
+penny = penny % 5
 
-	print("Dollar: $ " + dollar)
-	print("HalfDollar: $" + halfDollar)
-	print("Quarter: $" + quarter)
-	print("Dime: $" + Dime)
-	print("Nickel: $" + Nickel)
-	
 
+print("Change: $" + str(change))
+print("Dollar: " + str(dollar))
+print("HalfDollar: " + str(halfDollar))
+print("Quarter: " + str(quarter))
+print("Dime: " + str(dime))
+print("Nickel: " + str(nickel))
+print("Penny: " + str(penny))
